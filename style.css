@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap");
+
+:root {
+  --primary-color: #1f2024;
+  --secundary-color: #f5f5f5;
+  --highlight-color: #ffa500;
+  --error-color: #9e0e0e;
+
+  ---primary-font: "Roboto", sans-serif;
+
+  --spacing: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(---primary-font);
+
+  border: 1px, solid, #4f4f4f;
+}
+
+/* Formatos Generales */
+body {
+  color: var(--secundary-color);
+  background-color: var(--primary-color);
+  font-family: var(---primary-font);
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: var(--secundary-color);
+  padding: var(--spacing);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--highlight-color);
+}
+
+img {
+  width: 400px;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav {
+  display: flex;
+  justify-content: right;
+  padding-right: 2rem;
+}
+
+header nav ul {
+  display: flex;
+}
+
+.burguer {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  header nav {
+    display: none;
+  }
+
+  .burguer {
+    display: block;
+  }
+}
+
+/* Main */
+/* Main > Hero */
+/* Main > Section-About */
+#about > article {
+  display: flex;
+  gap: var(--spacing);
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#about .box {
+  width: 50px;
+  height: 50px;
+  color: var(--primary-color);
+  background-color: var(--secundary-color);
+  border: 2px, solid, var(--highlight-color);
+}
+
+/* Main > Section-Portfolio */
+/* Main > Section-Contact */
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
