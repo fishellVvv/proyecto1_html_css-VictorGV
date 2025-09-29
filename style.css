@@ -1,12 +1,97 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap");
 
 :root {
-  --primary-color: #1f2024;
-  --secundary-color: #f5f5f5;
-  --highlight-color: #ffa500;
-  --error-color: #9e0e0e;
+  /* Neutros */
+  --neutral-0: #f8f9fa;
+  --neutral-1: #e9ecef;
+  --neutral-2: #dee2e6;
+  --neutral-3: #ced4da;
+  --neutral-4: #adb5bd;
+  --neutral-5: #6c757d;
+  --neutral-6: #495057;
+  --neutral-7: #343a40;
+  --neutral-8: #212529;
 
-  ---primary-font: "Roboto", sans-serif;
+  /* Acento principal */
+  --primary-300: #9ce9a0;
+  --primary-400: #65bb65;
+  --primary-500: #558d58;
+  --primary-600: #3f7141;
+  --primary-700: #395839;
+
+  /* Acento secundario */
+  --accent-500: #d7900b;
+  --accent-600: #a87612;
+
+  /* Estados */
+  --success-500: #198754;
+  --warning-500: #ffc107;
+  --info-500: #0dcaf0;
+  --danger-500: #d2393c;
+
+  /* Utilidades */
+  --focus-ring-500: #0b5ed7;
+  --overlay-500: rgba(0, 0, 0, 0.5);
+
+  /* Tema claro */
+  --bg: var(--neutral-0);
+  --surface: var(--neutral-1);
+  --surface-2: var(--neutral-2);
+  --text: var(--neutral-8);
+  --text-muted: var(--neutral-5);
+  --border: var(--neutral-3);
+  --divider: var(--neutral-4);
+
+  --primary: var(--primary-500);
+  --primary-hover: var(--primary-600);
+  --primary-foreground: var(--neutral-0);
+
+  --accent: var(--accent-500);
+  --accent-hover: var(--accent-600);
+  --link: var(--accent-500);
+  --link-hover: var(--accent-600);
+
+  --success: var(--success-500);
+  --warning: var(--warning-500);
+  --info: var(--info-500);
+  --danger: var(--danger-500);
+
+  --focus-ring: var(--focus-ring-500);
+  --overlay: var(--overlay-500);
+
+  --primary-font: "Roboto", sans-serif;
+
+  --spacing: 16px;
+}
+
+/* Tema oscuro */
+:root[data-theme="dark"] {
+  --bg: var(--neutral-8);
+  --surface: var(--neutral-7);
+  --surface-2: var(--neutral-6);
+  --text: var(--neutral-0);
+  --text-muted: var(--neutral-4);
+  --border: var(--neutral-6);
+  --divider: var(--neutral-6);
+
+  --primary: var(--primary-400);
+  --primary-hover: var(--primary-300);
+  --primary-foreground: var(--neutral-7);
+
+  --accent: var(--accent-500);
+  --accent-hover: var(--accent-600);
+  --link: var(--accent-500);
+  --link-hover: var(--accent-600);
+
+  --success: var(--success-500);
+  --warning: var(--warning-500);
+  --info: var(--info-500);
+  --danger: var(--danger-500);
+
+  --focus-ring: var(--focus-ring-500);
+  --overlay: var(--overlay-500);
+
+  --primary-font: "Roboto", sans-serif;
 
   --spacing: 16px;
 }
@@ -15,16 +100,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(---primary-font);
+  font-family: var(--primary-font);
 
-  border: 1px, solid, #4f4f4f;
+  /* DEBUG SOLO mientras desarrollo */
+  /* outline: 1px dashed var(--border) !important; */
 }
 
 /* Formatos Generales */
 body {
-  color: var(--secundary-color);
-  background-color: var(--primary-color);
-  font-family: var(---primary-font);
+  color: var(--text);
+  background-color: var(--bg);
 }
 
 li {
@@ -32,13 +117,13 @@ li {
 }
 
 a {
-  color: var(--secundary-color);
+  color: var(--text);
   padding: var(--spacing);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--highlight-color);
+  color: var(--primary);
 }
 
 img {
@@ -50,12 +135,19 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--surface);
 }
 
-header nav {
+header div {
   display: flex;
   justify-content: right;
+  align-items: center;
   padding-right: 2rem;
+}
+
+header div nav {
+  display: flex;
+  justify-content: right;
 }
 
 header nav ul {
@@ -67,7 +159,7 @@ header nav ul {
 }
 
 @media (max-width: 600px) {
-  header nav {
+  header div nav {
     display: none;
   }
 
@@ -77,6 +169,10 @@ header nav ul {
 }
 
 /* Main */
+main {
+  margin: 2rem;
+}
+
 /* Main > Hero */
 /* Main > Section-About */
 #about > article {
@@ -90,9 +186,9 @@ header nav ul {
 #about .box {
   width: 50px;
   height: 50px;
-  color: var(--primary-color);
-  background-color: var(--secundary-color);
-  border: 2px, solid, var(--highlight-color);
+  color: var(--text-muted);
+  background-color: var(--surface);
+  border: 2px solid var(--border);
 }
 
 /* Main > Section-Portfolio */
@@ -104,4 +200,37 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  background-color: var(--surface);
+}
+
+/* Botón tema */
+#theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+#theme-toggle:hover {
+  color: var(--primary);
+}
+
+#theme-toggle .sun {
+  width: 1.25rem;
+  display: none;
+}
+#theme-toggle .moon {
+  width: 1.125rem;
+  display: inline;
+}
+
+:root[data-theme="dark"] #theme-toggle .sun {
+  display: inline;
+}
+:root[data-theme="dark"] #theme-toggle .moon {
+  display: none;
 }

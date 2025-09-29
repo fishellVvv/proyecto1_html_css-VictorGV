@@ -6,27 +6,70 @@
     <meta name="description" content="I'm Elliot and this is my portfolio." />
     <meta name="author" content="Victor García Vigil" />
     <meta name="keywords" content="Elliot, Alderson, Mr. robot, Portfolio" />
-    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./assets/js/theme-toggle.js" defer></script>
+
     <title>Elliot Alderson - My Portfolio</title>
   </head>
+
   <body>
     <header>
       <a href="#" class="logo">logo</a>
-      <nav>
-        <ul>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#portfolio">Portfolio</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
-      <a href="#" class="burguer">☰</a>
+
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="#" class="burguer">☰</a>
+
+        <button name="theme-toggle" id="theme-toggle">
+          <svg
+            class="sun"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4 12H2M22 12h-2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M19.07 4.93l-1.41 1.41M6.34 17.66l-1.41 1.41"
+            />
+          </svg>
+          <svg
+            class="moon"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+      </div>
     </header>
+
     <main>
       <hero>
         <h1>Elliot Alderson Portfolio</h1>
@@ -50,7 +93,7 @@
         <article class="photo">
           <h3>Port website</h3>
           <p>Prettie web about the port skykine views</p>
-          <img src="assets/port_sea.jpg" alt="The sea in the port" />
+          <img src="assets/img/port_sea.jpg" alt="The sea in the port" />
         </article>
         <article></article>
         <article></article>
@@ -59,6 +102,7 @@
         <h2>Contact</h2>
       </section>
     </main>
+
     <footer>
       <p>Copyright 2025 - Elliot Alderson</p>
     </footer>
