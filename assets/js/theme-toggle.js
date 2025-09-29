@@ -15,9 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("theme", t);
   };
 
-  // Aplica según la preferencia
+  // Aplica tema según la preferencia
   apply(prefer());
-  // Al hacer clic aplica el contrario al que hay
+
+  // Al hacer clic cambia el tema
   btn?.addEventListener("click", () =>
     apply(root.getAttribute("data-theme") === "dark" ? "light" : "dark")
   );

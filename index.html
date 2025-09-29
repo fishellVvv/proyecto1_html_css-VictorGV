@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="./style.css" />
     <script src="./assets/js/theme-toggle.js" defer></script>
+    <script src="./assets/js/nav-drawer.js" defer></script>
 
     <title>Elliot Alderson - My Portfolio</title>
   </head>
@@ -17,8 +18,8 @@
     <header>
       <a href="#" class="logo">logo</a>
 
-      <div>
-        <nav>
+      <div class="right">
+        <nav id="nav">
           <ul>
             <li>
               <a href="#about">About</a>
@@ -32,7 +33,14 @@
           </ul>
         </nav>
 
-        <a href="#" class="burguer">☰</a>
+        <button
+          class="burguer"
+          type="button"
+          aria-controls="nav"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
 
         <button name="theme-toggle" id="theme-toggle">
           <svg
@@ -71,9 +79,9 @@
     </header>
 
     <main>
-      <hero>
+      <section class="hero">
         <h1>Elliot Alderson Portfolio</h1>
-      </hero>
+      </section>
       <section id="about">
         <h2>About</h2>
         <article>
