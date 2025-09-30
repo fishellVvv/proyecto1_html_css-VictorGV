@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   /* Colores */
@@ -35,16 +35,17 @@
 
   /* Utilidades */
   --focus-ring-500: #0b5ed7;
-  --overlay-500: rgba(0, 0, 0, 0.5);
+  --overlay-l: rgba(233, 236, 239, 0.8);
+  --overlay-d: rgba(52, 58, 64, 0.8);
 
   /* Tema claro */
   --bg: var(--neutral-0);
   --surface: var(--neutral-1);
   --surface-2: var(--neutral-2);
-  --text: var(--neutral-8);
-  --text-muted: var(--neutral-5);
   --border: var(--neutral-3);
   --divider: var(--neutral-4);
+  --text-muted: var(--neutral-5);
+  --text: var(--neutral-8);
 
   --primary: var(--color02-500);
   --primary-hover: var(--color02-600);
@@ -61,9 +62,10 @@
   --danger: var(--danger-500);
 
   --focus-ring: var(--focus-ring-500);
-  --overlay: var(--overlay-500);
+  --overlay: var(--overlay-l);
 
-  --primary-font: "Roboto", sans-serif;
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Roboto Mono", ui-monospace, monospace;
 }
 
 /* Tema oscuro */
@@ -71,45 +73,37 @@
   --bg: var(--neutral-8);
   --surface: var(--neutral-7);
   --surface-2: var(--neutral-6);
+  --border: var(--neutral-5);
+  --divider: var(--neutral-4);
+  --text-muted: var(--neutral-3);
   --text: var(--neutral-0);
-  --text-muted: var(--neutral-4);
-  --border: var(--neutral-6);
-  --divider: var(--neutral-6);
 
   --primary: var(--color01-500);
-  --primary-hover: var(--color01-600);
+  --primary-hover: var(--color01-400);
   --primary-foreground: var(--neutral-0);
 
   --accent: var(--color02-500);
-  --accent-hover: var(--color02-600);
+  --accent-hover: var(--color02-400);
   --link: var(--color02-500);
-  --link-hover: var(--color02-600);
+  --link-hover: var(--color02-400);
 
-  --success: var(--success-500);
-  --warning: var(--warning-500);
-  --info: var(--info-500);
-  --danger: var(--danger-500);
-
-  --focus-ring: var(--focus-ring-500);
-  --overlay: var(--overlay-500);
-
-  --primary-font: "Roboto", sans-serif;
+  --overlay: var(--overlay-d);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--primary-font);
 
   /* DEBUG SOLO mientras desarrollo */
-  /* outline: 1px dashed var(--border) !important; */
+  /* outline: 1px dashed var(--border); */
 }
 
 /* Formatos Generales */
 body {
   color: var(--text);
   background-color: var(--bg);
+  font-family: var(--font-primary);
 }
 
 li {
@@ -147,83 +141,63 @@ button:hover {
 
 /* header */
 header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--surface);
+
+  position: sticky;
+  top: 0.5rem;
+  z-index: 100;
+  height: 1.75rem;
+
+  font-family: var(--font-secondary);
+  margin: 0 2rem;
+}
+
+header .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+
+  height: 100%;
+
+  background-color: var(--overlay);
   border-bottom: 1px solid var(--border);
+  border-radius: 0.5rem;
+}
+
+header .logo-l {
+  display: inline;
+}
+
+header .logo-s {
+  display: none;
 }
 
 header .right {
-  position: relative;
   display: flex;
   justify-content: flex-end;
-  gap: 0.5rem;
   align-items: center;
-  padding-right: 2rem;
-}
+  position: relative;
 
-header .right nav {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: right;
+  height: 100%;
+
+  background-color: var(--overlay);
+  border-bottom: 1px solid var(--border);
+  border-radius: 0.5rem;
 }
 
 header nav ul {
   display: flex;
 }
 
-header a {
-  padding: 1rem;
+header li {
+  border-right: 1px solid var(--border);
 }
 
-@media (max-width: 600px) {
-  header .right {
-    position: relative;
-  }
-
-  header .right #nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: min(160px, 80vw);
-    flex-direction: column;
-    z-index: 100;
-    gap: 0.5rem;
-  }
-  header .right #nav.open {
-    display: flex;
-  }
-
-  header .right #nav a {
-    display: block;
-    padding: 0.5rem 1rem;
-    border: 1px solid var(--border);
-    border-radius: 0.5rem;
-    background: var(--surface);
-    color: var(--link);
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  header .right #nav a:hover {
-    background: var(--surface-2);
-    color: var(--link-hover);
-    border-color: var(--border);
-  }
-
-  header nav ul {
-    display: block;
-    margin: 0;
-    padding: 0;
-  }
-  header nav li {
-    list-style: none;
-    margin: 0;
-  }
+header a {
+  padding: 0.5rem;
 }
 
 /* header > burguer */
@@ -232,16 +206,6 @@ header a {
   background: transparent;
   border: none;
   display: none;
-}
-
-@media (max-width: 600px) {
-  header .right nav {
-    display: none;
-  }
-
-  .burguer {
-    display: block;
-  }
 }
 
 /* header > button-theme-toggle */
@@ -258,11 +222,10 @@ header a {
 #theme-toggle .sun {
   display: none;
 }
-#theme-toggle .moon {
+:root[data-theme="dark"] #theme-toggle .sun {
   display: inline;
 }
-
-:root[data-theme="dark"] #theme-toggle .sun {
+#theme-toggle .moon {
   display: inline;
 }
 :root[data-theme="dark"] #theme-toggle .moon {
@@ -312,4 +275,65 @@ footer {
 }
 :focus {
   outline: none;
+}
+
+/* media queries */
+@media (max-width: 600px) {
+  header .logo-l {
+    display: none;
+  }
+
+  header .logo-s {
+    display: block;
+  }
+
+  header .right {
+    position: relative;
+  }
+
+  header .right #nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: auto;
+    flex-direction: column;
+    z-index: 100;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    background: var(--overlay);
+  }
+  header .right #nav.open {
+    display: flex;
+  }
+
+  header .right #nav a {
+    display: block;
+    padding: 0.25rem 1rem;
+    color: var(--link);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  header .right #nav a:hover {
+    color: var(--link-hover);
+  }
+
+  header nav ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  header nav li {
+    border-right: none;
+    list-style: none;
+    margin: 0;
+  }
+
+  header nav li + li {
+    border-top: 1px solid var(--border);
+  }
+
+  .burguer {
+    display: block;
+  }
 }
