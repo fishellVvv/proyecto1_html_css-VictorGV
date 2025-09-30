@@ -37,14 +37,13 @@
         </nav>
 
         <button
-          class="burguer"
-          type="button"
+          class="selector burguer"
           aria-controls="nav"
           aria-expanded="false"
         >
           ☰
         </button>
-        <button name="theme-toggle" id="theme-toggle">
+        <button name="theme-toggle" class="selector" id="theme-toggle">
           <svg
             class="sun"
             width="24"
@@ -82,8 +81,39 @@
 
     <main>
       <section class="hero">
-        <h1>Elliot Alderson Portfolio</h1>
+        <div class="profile-card">
+          <img
+            class="avatar"
+            src="./assets/img/avatar.jpg"
+            alt="Elliot Alderson avatar"
+          />
+          <div class="info">
+            <h1 class="name">Elliot Alderson</h1>
+            <p class="role">Full-Stack Developer · Security-minded</p>
+            <p class="bio">
+              I craft maintainable front-ends and performant APIs. I value
+              privacy, testing and simple architectures.
+            </p>
+
+            <ul class="meta">
+              <li>New York, USA</li>
+              <li>Remote</li>
+              <li>Available</li>
+            </ul>
+
+            <div class="tags">
+              <span>JavaScript</span><span>React</span><span>Node.js</span>
+              <span>Linux</span><span>Docker</span>
+            </div>
+
+            <div class="actions">
+              <a class="btn primary" href="#contact">Contact</a>
+              <a class="btn ghost" href="#portfolio">View work</a>
+            </div>
+          </div>
+        </div>
       </section>
+
       <section id="about">
         <h2>About</h2>
         <article>
@@ -98,6 +128,7 @@
           <div class="box">9</div>
         </article>
       </section>
+
       <section id="portfolio">
         <h2>Portfolio</h2>
         <article class="photo">
@@ -108,6 +139,7 @@
         <article></article>
         <article></article>
       </section>
+
       <section id="contact">
         <h2>Contact</h2>
       </section>
