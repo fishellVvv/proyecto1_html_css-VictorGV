@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const apply = (isDark) => {
     document.documentElement.dataset.theme = isDark ? "dark" : "light";
     localStorage.setItem("theme", isDark ? "dark" : "light");
-    btn.setAttribute("aria-pressed", String(isDark));
+    btn.setAttribute("aria-pressed", isDark ? "true" : "false");
     btn.setAttribute(
       "aria-label",
       isDark ? "Switch to light theme" : "Switch to dark theme"
