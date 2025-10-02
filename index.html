@@ -4,10 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="I'm Elliot and this is my portfolio." />
-    <meta name="author" content="Victor García Vigil" />
+    <meta name="author" content="Victor Vigil Vela" />
     <meta name="keywords" content="Elliot, Alderson, Mr. Robot, Portfolio" />
+    <meta property="og:title" content="Elliot Alderson — Portfolio" />
+    <meta
+      property="og:description"
+      content="Fictional portfolio for a Master project."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#212529" />
 
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
     <script src="./assets/js/theme-toggle.js" defer></script>
     <script src="./assets/js/nav-drawer.js" defer></script>
 
@@ -15,6 +30,8 @@
   </head>
 
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <header>
       <div class="logo">
         <a href="#" class="logo-l">&lt;ElliotAlderson/&gt;</a>
@@ -22,7 +39,7 @@
       </div>
 
       <div class="right">
-        <nav id="nav">
+        <nav id="nav" aria-label="Primary">
           <ul>
             <li>
               <a href="#about">About</a>
@@ -40,6 +57,7 @@
           class="selector burger"
           aria-controls="nav"
           aria-expanded="false"
+          aria-label="Primary"
         >
           ☰
         </button>
@@ -79,7 +97,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main" tabindex="-1">
       <section class="hero">
         <div class="profile-card">
           <img
@@ -107,8 +125,18 @@
             </div>
 
             <div class="actions">
-              <a class="btn primary" href="#contact">Contact</a>
-              <a class="btn ghost" href="#portfolio">View work</a>
+              <a
+                class="btn primary"
+                href="#contact"
+                aria-label="go to contact section"
+                >Contact</a
+              >
+              <a
+                class="btn ghost"
+                href="#portfolio"
+                aria-label="go to portfolio section"
+                >View work</a
+              >
             </div>
           </div>
         </div>
@@ -149,7 +177,12 @@
               <div class="tags">
                 <span>HTML</span><span>CSS</span><span>JavaScript</span>
               </div>
-              <a href="#" class="btn ghost">View project</a>
+              <a
+                href="#"
+                class="btn ghost"
+                aria-label="View details of Port Website"
+                >View project</a
+              >
             </div>
           </article>
 
@@ -166,7 +199,10 @@
               <div class="tags">
                 <span>Java</span><span>PostgreSQL</span><span>Docker</span>
               </div>
-              <a href="#" class="btn ghost" aria-label="Project details"
+              <a
+                href="#"
+                class="btn ghost"
+                aria-label="View details of Enterprise Payment Gateway"
                 >View project</a
               >
             </div>
@@ -184,8 +220,49 @@
               <div class="tags">
                 <span>Go</span><span>Linux</span><span>gRPC</span>
               </div>
-              <a href="#" class="btn ghost" aria-label="Project details"
+              <a
+                href="#"
+                class="btn ghost"
+                aria-label="View details of Distributed Resilience Toolkit"
                 >View project</a
+              >
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              src="./assets/img/terminal.png"
+              alt="Terminal log viewer mockup"
+            />
+            <div class="card-body">
+              <h3>Log Analysis Viewer</h3>
+              <p>
+                Minimal viewer to explore structured logs with client-side
+                filtering and pagination. Focused on readability and quick
+                triage for incidents. Ready to fork it yourself and distribute.
+              </p>
+              <div class="tags">
+                <span>HTML</span><span>CSS</span><span>Vanilla</span>
+              </div>
+              <a
+                href="#"
+                class="btn ghost"
+                aria-label="View details of Distributed Resilience Toolkit"
+                >View project</a
+              >
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="./assets/img/secret.png" alt="Blurred logo" />
+            <div class="card-body">
+              <h3>Secret project</h3>
+              <p>Its a secret...</p>
+              <div class="tags">
+                <span>???</span><span>???</span><span>???</span>
+              </div>
+              <a href="#" class="btn ghost" aria-label="Don't do nothing"
+                >Coming soon...</a
               >
             </div>
           </article>
@@ -204,7 +281,13 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5" required></textarea>
 
-          <button type="submit" class="btn primary">Send</button>
+          <button
+            type="submit"
+            class="btn primary"
+            aria-label="Send contact email"
+          >
+            Send
+          </button>
         </form>
       </section>
     </main>
@@ -212,8 +295,12 @@
     <footer>
       <p>
         © 2025 Portfolio Project — Fictional character inspired by
-        <em>Mr. Robot</em>. Created by Victor García Vigil for academic
-        purposes.
+        <em>Mr. Robot</em>. Created by Victor V. V.
+      </p>
+      <p class="links">
+        <a href="https://github.com/fishellVvv">GitHub</a>
+        <a href="https://www.linkedin.com/in/victorvigil/">LinkedIn</a>
+        <a href="https://fishellvvv.github.io/portfolio/">Portfolio</a>
       </p>
     </footer>
   </body>
