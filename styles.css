@@ -185,6 +185,12 @@ video {
   color: var(--accent-hover);
 }
 
+.btn:focus-visible,
+.selector:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
 /* header [FLEX] */
 header {
   display: flex;
@@ -253,6 +259,12 @@ header li {
 
 header a {
   padding: 0.5rem;
+}
+
+header a:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
 }
 
 /* header > burger */
