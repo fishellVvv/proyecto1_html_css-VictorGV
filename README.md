@@ -14,14 +14,16 @@ Portafolio ficticio desarrollado para el Máster. El sitio presenta a **Elliot A
 
 ## 📁 Estructura
 
+```text
 /
 ├─ index.html
 ├─ styles.css
 └─ assets/
-├─ img/
-└─ js/
-├─ nav-drawer.js
-└─ theme-toggle.js
+   ├─ img/
+   └─ js/
+      ├─ nav-drawer.js
+      └─ theme-toggle.js
+```
 
 > El enunciado pedía **HTML + CSS**. He mantenido 2 JS **opcionales** (identificados) para mejorar UX:
 >
@@ -89,5 +91,3 @@ Portafolio ficticio desarrollado para el Máster. El sitio presenta a **Elliot A
 - Imágenes: _uso educativo_ / _placeholders_ sin ánimo comercial.
 - Personaje: **ficción** inspirada en _Mr. Robot_.
 - Autor del proyecto: **Víctor Vigil Vela**.
-
----
