@@ -101,11 +101,12 @@
     <main id="main" tabindex="-1">
       <section class="hero">
         <div class="profile-card">
-          <img
-            class="avatar"
-            src="./assets/img/avatar.jpg"
+          <img class="avatar"
+            src="./assets/img/hero/avatar.webp"
+            srcset="./assets/img/hero/avatar-128.webp 1x, ./assets/img/hero/avatar.jpg 1x"
             alt="Elliot Alderson avatar"
-         >
+            width="128" height="128"
+            fetchpriority="high">
           <div class="info">
             <h1 class="name">Elliot Alderson</h1>
             <p class="role">Full-Stack Developer · Security-minded</p>
@@ -168,7 +169,13 @@
         <h2>&lt;Portfolio/&gt;</h2>
         <div class="portfolio-grid">
           <article class="card">
-            <img src="./assets/img/port_sea.jpg" alt="Skyline of the port">
+            <picture>
+              <source type="image/webp" srcset="./assets/img/portfolio/port_sea.webp">
+              <img src="./assets/img/portfolio/port_sea.jpg"
+                alt="Skyline of the port"
+                width="432" height="288"
+                loading="lazy">
+            </picture>
             <div class="card-body">
               <h3>Port Website</h3>
               <p>
@@ -189,7 +196,13 @@
           </article>
 
           <article class="card">
-            <img src="./assets/img/ecorp.jpg" alt="Enterprise HQ entrance">
+            <picture>
+              <source type="image/webp" srcset="./assets/img/portfolio/ecorp.webp">
+              <img src="./assets/img/portfolio/ecorp.jpg"
+                alt="Enterprise HQ entrance"
+                width="432" height="288"
+                loading="lazy">
+            </picture>
             <div class="card-body">
               <h3>Enterprise Payment Gateway</h3>
               <p>
@@ -210,7 +223,13 @@
           </article>
 
           <article class="card">
-            <img src="./assets/img/fsociety.jpg" alt="fsociety sign">
+            <picture>
+              <source type="image/webp" srcset="./assets/img/portfolio/fsociety.webp">
+              <img src="./assets/img/portfolio/fsociety.jpg"
+                alt="fsociety sign"
+                width="432" height="288"
+                loading="lazy">
+            </picture>
             <div class="card-body">
               <h3>Distributed Resilience Toolkit</h3>
               <p>
@@ -231,10 +250,13 @@
           </article>
 
           <article class="card">
-            <img
-              src="./assets/img/terminal.png"
-              alt="Terminal log viewer mockup"
-           >
+            <picture>
+              <source type="image/webp" srcset="./assets/img/portfolio/terminal.webp">
+              <img src="./assets/img/portfolio/terminal.jpg"
+                alt="Terminal log viewer mockup"
+                width="432" height="288"
+                loading="lazy">
+            </picture>
             <div class="card-body">
               <h3>Log Analysis Viewer</h3>
               <p>
@@ -255,7 +277,13 @@
           </article>
 
           <article class="card">
-            <img src="./assets/img/secret.png" alt="Blurred logo">
+            <picture>
+              <source type="image/webp" srcset="./assets/img/portfolio/secret.webp">
+              <img src="./assets/img/portfolio/secret.jpg"
+                alt="Blurred logo"
+                width="432" height="288"
+                loading="lazy">
+            </picture>
             <div class="card-body">
               <h3>Secret project</h3>
               <p>It's a secret…</p>
