@@ -1,25 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const root = document.documentElement;
   const btn = document.getElementById("theme-toggle");
+  if (!btn) return;
 
-  // Guardado y preferencia
-  const prefer = () =>
-    localStorage.getItem("theme") ||
-    (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-
-  // Aplica dark o lo elimina
-  const apply = (t) => {
-    t === "dark"
-      ? root.setAttribute("data-theme", "dark")
-      : root.removeAttribute("data-theme");
-    localStorage.setItem("theme", t);
+  const apply = (isDark) => {
+    document.documentElement.dataset.theme = isDark ? "dark" : "light";
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    btn.setAttribute("aria-pressed", String(isDark));
+    btn.setAttribute(
+      "aria-label",
+      isDark ? "Switch to light theme" : "Switch to dark theme"
+    );
   };
 
-  // Aplica tema según la preferencia
-  apply(prefer());
+  // estado inicial (desde localStorage o preferencia del SO)
+  const stored = localStorage.getItem("theme");
+  const initialDark = stored
+    ? stored === "dark"
+    : window.matchMedia("(prefers-color-scheme: dark)").matches;
+  apply(initialDark);
 
-  // Al hacer clic cambia el tema
-  btn?.addEventListener("click", () =>
-    apply(root.getAttribute("data-theme") === "dark" ? "light" : "dark")
-  );
+  btn.addEventListener("click", () => {
+    const isDark = document.documentElement.dataset.theme !== "dark";
+    apply(isDark);
+  });
 });
