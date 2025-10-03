@@ -20,6 +20,7 @@ Portafolio ficticio desarrollado para el Máster. El sitio presenta a **Elliot A
 ├─ styles.css
 └─ assets/
    ├─ img/
+   ├─ fonts/
    └─ js/
       ├─ nav-drawer.js
       └─ theme-toggle.js
