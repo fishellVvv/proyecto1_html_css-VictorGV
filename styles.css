@@ -1,8 +1,7 @@
 /* --- Fonts--- */
 @font-face {
   font-family: "Roboto";
-  src: url("/assets/fonts/roboto/Roboto-VariableFont_wdth,wght.ttf")
-    format("truetype");
+  src: url("./assets/fonts/roboto/roboto-variable.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -10,7 +9,7 @@
 
 @font-face {
   font-family: "Roboto Mono";
-  src: url("/assets/fonts/roboto-mono/RobotoMono-VariableFont_wght.ttf")
+  src: url("./assets/fonts/roboto-mono/roboto-mono-variable.ttf")
     format("truetype");
   font-weight: 100 700;
   font-style: normal;
