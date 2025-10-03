@@ -20,24 +20,18 @@
   --neutral-8: #212529;
 
   /* Principal Colors */
-  --color01-300: #9ce9a0;
+  --color01-300: #bbfcbf;
   --color01-400: #65bb65;
   --color01-500: #558d58;
   --color01-600: #3f7141;
-  --color01-700: #395839;
+  --color01-700: #2c4a2c;
 
   /* Secondary Color */
-  --color02-300: #fcca6e;
+  --color02-300: #fcd792;
   --color02-400: #ebb041;
   --color02-500: #d7900b;
   --color02-600: #a87612;
   --color02-700: #745009;
-
-  /* States */
-  --success-500: #198754;
-  --warning-500: #ffc107;
-  --info-500: #0dcaf0;
-  --danger-500: #d2393c;
 
   /* Utils */
   --focus-ring-500: #0b5ed7;
@@ -49,24 +43,20 @@
   --surface: var(--neutral-1);
   --surface-2: var(--neutral-2);
   --surface-3: var(--neutral-3);
-  --border: var(--neutral-3);
-  --divider: var(--neutral-4);
-  --text-muted: var(--neutral-5);
+  --border: var(--neutral-4);
+  --divider: var(--neutral-5);
+  --text-muted: var(--neutral-6);
   --text: var(--neutral-8);
 
-  --primary: var(--color02-500);
-  --primary-hover: var(--color02-700);
-  --primary-foreground: var(--neutral-0);
+  --primary: var(--color02-400);
+  --primary-hover: var(--color02-600);
+  --primary-foreground: var(--neutral-8);
+  --primary-contrast: var(--neutral-0);
 
-  --accent: var(--color01-500);
-  --accent-hover: var(--color01-700);
-  --link: var(--color01-500);
-  --link-hover: var(--color01-700);
-
-  --success: var(--success-500);
-  --warning: var(--warning-500);
-  --info: var(--info-500);
-  --danger: var(--danger-500);
+  --accent: var(--color01-400);
+  --accent-hover: var(--color01-600);
+  --link: var(--color01-400);
+  --link-hover: var(--color01-600);
 
   --focus-ring: var(--focus-ring-500);
   --overlay: var(--overlay-l);
@@ -86,15 +76,17 @@
   --text-muted: var(--neutral-3);
   --text: var(--neutral-0);
 
-  --primary: var(--color01-500);
-  --primary-hover: var(--color01-300);
+  --primary: var(--color01-700);
+  --primary-hover: var(--color01-500);
   --primary-foreground: var(--neutral-0);
+  --primary-contrast: var(--neutral-8);
 
-  --accent: var(--color02-500);
+  --accent: var(--color02-400);
   --accent-hover: var(--color02-300);
-  --link: var(--color02-500);
+  --link: var(--color02-400);
   --link-hover: var(--color02-300);
 
+  --focus-ring: var(--focus-ring-500);
   --overlay: var(--overlay-d);
 }
 
@@ -170,16 +162,16 @@ video {
 }
 .btn.primary:hover {
   background: var(--primary-hover);
-  color: var(--surface-3);
+  color: var(--primary-contrast);
 }
 .btn.ghost {
   background: var(--surface-2);
-  color: var(--accent);
+  color: var(--accent-hover);
   border-color: var(--border);
 }
 .btn.ghost:hover {
-  background: var(--surface-3);
-  color: var(--accent-hover);
+  background: var(--accent-hover);
+  color: var(--bg);
 }
 
 .btn:focus-visible,
@@ -405,7 +397,7 @@ main {
 .code-feel {
   font-family: var(--font-secondary);
   font-size: 0.75rem;
-  color: var(--primary);
+  color: var(--primary-hover);
   margin-bottom: 1rem;
 }
 
