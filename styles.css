@@ -61,8 +61,10 @@
   --focus-ring: var(--focus-ring-500);
   --overlay: var(--overlay-l);
 
-  --font-primary: "Roboto", sans-serif;
-  --font-secondary: "Roboto Mono", ui-monospace, monospace;
+  --font-primary: "Roboto", system-ui, -apple-system, "Segoe UI", Arial,
+    sans-serif;
+  --font-secondary: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Consolas,
+    monospace;
 }
 
 /* Dark Theme */
