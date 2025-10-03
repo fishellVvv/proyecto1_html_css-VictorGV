@@ -53,8 +53,8 @@
 
   /* Utils */
   --focus-ring-500: #0b5ed7;
-  --overlay-l: rgba(233, 233, 233, 0.8);
-  --overlay-d: rgba(52, 52, 52, 0.8);
+  --overlay-l: rgba(233, 236, 239, 0.8);
+  --overlay-d: rgba(52, 58, 64, 0.8);
 
   /* Light Theme */
   --bg: var(--neutral-0);
