@@ -21,17 +21,17 @@
 
   /* Principal Colors */
   --color01-300: #bbfcbf;
-  --color01-400: #65bb65;
-  --color01-500: #558d58;
-  --color01-600: #3f7141;
-  --color01-700: #2c4a2c;
+  --color01-400: #57a857;
+  --color01-500: #426f44;
+  --color01-600: #376038;
+  --color01-700: #213821;
 
   /* Secondary Color */
-  --color02-300: #fcd792;
-  --color02-400: #ebb041;
+  --color02-300: #f8e4be;
+  --color02-400: #efbb5a;
   --color02-500: #d7900b;
   --color02-600: #a87612;
-  --color02-700: #362605;
+  --color02-700: #45320a;
 
   /* Utils */
   --focus-ring-500: #0b5ed7;
