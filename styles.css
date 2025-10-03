@@ -166,7 +166,7 @@ video {
 }
 .btn.ghost {
   background: var(--surface-2);
-  color: var(--accent-hover);
+  color: var(--accent);
   border-color: var(--border);
 }
 .btn.ghost:hover {
