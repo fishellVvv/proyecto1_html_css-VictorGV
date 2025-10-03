@@ -31,7 +31,7 @@
   --color02-400: #ebb041;
   --color02-500: #d7900b;
   --color02-600: #a87612;
-  --color02-700: #745009;
+  --color02-700: #362605;
 
   /* Utils */
   --focus-ring-500: #0b5ed7;
@@ -50,7 +50,7 @@
 
   --primary: var(--color02-400);
   --primary-hover: var(--color02-600);
-  --primary-foreground: var(--neutral-8);
+  --primary-foreground: var(--color02-700);
   --primary-contrast: var(--color02-300);
 
   --accent: var(--color01-500);
