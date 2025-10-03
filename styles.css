@@ -53,10 +53,10 @@
   --primary-foreground: var(--neutral-8);
   --primary-contrast: var(--color02-300);
 
-  --accent: var(--color01-400);
-  --accent-hover: var(--color01-600);
-  --link: var(--color01-400);
-  --link-hover: var(--color01-600);
+  --accent: var(--color01-500);
+  --accent-hover: var(--color01-700);
+  --link: var(--color01-500);
+  --link-hover: var(--color01-700);
 
   --focus-ring: var(--focus-ring-500);
   --overlay: var(--overlay-l);
