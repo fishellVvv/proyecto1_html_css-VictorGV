@@ -51,7 +51,7 @@
   --primary: var(--color02-400);
   --primary-hover: var(--color02-600);
   --primary-foreground: var(--neutral-8);
-  --primary-contrast: var(--neutral-0);
+  --primary-contrast: var(--color02-300);
 
   --accent: var(--color01-400);
   --accent-hover: var(--color01-600);
@@ -78,7 +78,7 @@
 
   --primary: var(--color01-700);
   --primary-hover: var(--color01-500);
-  --primary-foreground: var(--neutral-0);
+  --primary-foreground: var(--color01-300);
   --primary-contrast: var(--neutral-8);
 
   --accent: var(--color02-400);
@@ -397,7 +397,7 @@ main {
 .code-feel {
   font-family: var(--font-secondary);
   font-size: 0.75rem;
-  color: var(--primary-hover);
+  color: var(--primary-foreground);
   margin-bottom: 1rem;
 }
 
