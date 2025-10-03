@@ -35,8 +35,8 @@
 
   /* Utils */
   --focus-ring-500: #0b5ed7;
-  --overlay-l: rgba(233, 236, 239, 0.75);
-  --overlay-d: rgba(52, 58, 64, 0.75);
+  --overlay-l: rgba(233, 233, 233, 0.8);
+  --overlay-d: rgba(52, 52, 52, 0.8);
 
   /* Light Theme */
   --bg: var(--neutral-0);
@@ -53,10 +53,10 @@
   --primary-foreground: var(--color02-700);
   --primary-contrast: var(--color02-300);
 
-  --accent: var(--color01-500);
-  --accent-hover: var(--color01-700);
-  --link: var(--color01-500);
-  --link-hover: var(--color01-700);
+  --accent: var(--color01-700);
+  --accent-hover: var(--color01-500);
+  --link: var(--color01-700);
+  --link-hover: var(--color01-500);
 
   --focus-ring: var(--focus-ring-500);
   --overlay: var(--overlay-l);
