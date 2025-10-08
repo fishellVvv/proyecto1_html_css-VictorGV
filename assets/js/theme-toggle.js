@@ -23,4 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const isDark = document.documentElement.dataset.theme !== "dark";
     apply(isDark);
   });
+
+  // el otro
+  console.log("%cHello, friend.", "color:#57a857; font-size:1rem;");
+  console.log("%cRemember — the other one is watching...", "color:#57a857; font-size:1rem;");
 });
